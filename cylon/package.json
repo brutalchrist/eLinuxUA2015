@@ -1,0 +1,17 @@
+{
+  "name": "JS_love_Robots",
+  "version": "1.0.0",
+  "description": "Examples eLinuxUA 2015",
+  "author": "brutalchrist",
+  "license": "ISC",
+  "dependencies": {
+    "cylon": "^1.2.0",
+    "cylon-api-socketio": "^0.4.0",
+    "cylon-firmata": "^0.23.0",
+    "cylon-gpio": "^0.27.0",
+    "cylon-i2c": "^0.23.0",
+    "cylon-speech": "^0.8.0",
+    "figlet": "^1.1.1",
+    "spotify-node-applescript": "^0.2.2"
+  }
+}
