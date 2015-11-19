@@ -1,10 +1,10 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  name: "hablot",
+  name: 'haBlot',
 
   connections: {
-    speech: { adaptor: 'speech', voice: 'es-f2', speed: 130 }
+    speech: { adaptor: 'speech, voice: 'es-f2', speed: 130 }
   },
 
   devices: {

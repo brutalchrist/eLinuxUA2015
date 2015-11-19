@@ -1,7 +1,7 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  name: "Rocolor",
+  name: 'RoColor',
 
   connections: {
     arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1411' }

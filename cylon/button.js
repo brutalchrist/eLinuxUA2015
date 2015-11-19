@@ -2,8 +2,10 @@ var Cylon = require('cylon');
 var Spotify = require('spotify-node-applescript');
 
 Cylon.robot({
-connections: {
-    arduino: { adaptor: 'firmata', port: '/dev/tty.usbserial-AH00PD69' }
+	name: 'SpotyBot',
+
+	connections: {
+    arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1421' }
   },
 
   devices: {

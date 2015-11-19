@@ -2,6 +2,8 @@ var Cylon = require('cylon');
 var figlet = require('figlet');
 
 Cylon.robot({
+  name: 'RobOuch',
+
   connections: {
     speech: { adaptor: 'speech', voice: 'es-m2', speed: 130 },
     arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1411' }

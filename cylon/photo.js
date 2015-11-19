@@ -1,6 +1,8 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
+  name: 'RoboLuz',
+
   connections: {
     arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1411' }
   },
