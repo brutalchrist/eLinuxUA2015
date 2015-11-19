@@ -1,7 +1,7 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  name: 'RoColor',
+  name: 'Rocolor',
 
   connections: {
     arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1411' }
@@ -16,10 +16,9 @@ Cylon.robot({
     every((1).second(), function() {
       if (color == "ff0000") {
         color = "00ff00"
-      } else
-      {
+      } else {
         color = "ff0000"
-      };
+      }
       my.leds.setRGB(color);
     });
   }
