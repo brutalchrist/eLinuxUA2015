@@ -5,11 +5,11 @@ Cylon.robot({
   name: 'SpotyBot',
 
   connections: {
-    arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1421' }
+    arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1411' }
   },
 
   devices: {
-    button: { driver: 'button', pin: 2 }
+    button: { driver: 'button', pin: 7 }
   },
 
   work: function(my) {
