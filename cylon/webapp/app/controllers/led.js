@@ -4,7 +4,7 @@ module.exports = function(app) {
 
   Cylon.robot({
     connections: {
-      arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1411' }
+      arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1421' }
     },
 
     devices: {
@@ -15,10 +15,12 @@ module.exports = function(app) {
       app.route('/api/:led/:position').get(function(req, res, next) {
         var led = req.params.led;
         if(req.params.position == 'on') {
-          if( led == '13' )     my.trece.turnOn();
+          if(led == '13')
+            my.trece.turnOn();
         }
         else {
-          if( led == '13' )     my.trece.turnOff();
+          if(led == '13')
+            my.trece.turnOff();
         }
         res.sendStatus(200);
       });

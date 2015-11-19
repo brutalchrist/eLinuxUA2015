@@ -10,12 +10,12 @@ Cylon.robot({
   },
 
   work: function(my) {
-	var angle = 0 ;
+  var angle = 0 ;
     my.servo.angle(angle);
     every((1).second(), function() {
-		angle = Math.floor((Math.random() * 180) + 1);
-		console.log('Angulo: ' + angle);
-		my.servo.angle(angle);
+      angle = Math.floor((Math.random() * 180) + 1);
+      console.log('Angulo: ' + angle);
+      my.servo.angle(angle);
     });
   }
 }).start();
