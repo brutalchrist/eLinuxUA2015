@@ -4,7 +4,7 @@ module.exports = function(app) {
 
   Cylon.robot({
     connections: {
-      arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1421' }
+      arduino: { adaptor: 'firmata', port: '/dev/tty.usbmodem1411' }
     },
 
     devices: {
