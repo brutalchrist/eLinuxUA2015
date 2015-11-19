@@ -1,9 +1,7 @@
 # JS love Robots!
 
-Ejemplos presentación `JS love Robots!` encuentro de Linux UA 2015.
+Ejemplos presentaciÃ³n `JS love Robots!` encuentro de Linux UA 2015.
 
 ## Dependencias
 
-	```bash
-	$ npm update
-	```
+	`$ npm update`
