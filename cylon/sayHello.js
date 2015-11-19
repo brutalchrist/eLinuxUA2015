@@ -4,7 +4,7 @@ Cylon.robot({
   name: 'haBlot',
 
   connections: {
-    speech: { adaptor: 'speech, voice: 'es-f2', speed: 130 }
+    speech: { adaptor: 'speech', voice: 'es-f2', speed: 130 }
   },
 
   devices: {
