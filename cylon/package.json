@@ -12,6 +12,7 @@
     "cylon-i2c": "^0.23.0",
     "cylon-speech": "^0.8.0",
     "figlet": "^1.1.1",
+    "function-graph": "^0.1.2",
     "spotify-node-applescript": "^0.2.2"
   }
 }

@@ -1,4 +1,5 @@
 var Cylon = require('cylon');
+var FunctionGraph = require("function-graph");
 
 Cylon.robot({
   name: 'RoboLuz',
@@ -8,15 +9,36 @@ Cylon.robot({
   },
 
   devices: {
-    sensor: { driver: 'analog-sensor', pin: 0, lowerLimit: 100, upperLimit: 900 }
+    sensor: { driver: 'analog-sensor', pin: 1, lowerLimit: 100, upperLimit: 900 }
   },
 
   work: function(my) {
     var analogValue = 0;
+    var x = 0;
 
-    every((1).second(), function() {
+    var graph = new FunctionGraph ({
+                      height: 30,
+                      width: 150,
+                      center:{
+                        x: 5,
+                        y: 25,
+                      },
+                      marks: {
+                        hAxis: '─',
+                        vAxis: '│',
+                        center: '+',
+                        point: '#'
+                      }
+                    });
+
+    every((0.2).second(), function() {
       analogValue = my.sensor.analogRead();
-      console.log('Analog value => ', analogValue);
+      scaleValue =  Math.round((analogValue / 1000).toScale(0, 25));
+      graph.addPoint(x, scaleValue);
+      x++;
+      console.log('\033[2J');
+      console.log('Photo value: ' + analogValue + ' | (' + x + ', ' + scaleValue + ')');
+      console.log(graph.toString());
     });
   }
 }).start();
